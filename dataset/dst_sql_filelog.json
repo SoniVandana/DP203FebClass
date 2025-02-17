@@ -1,0 +1,38 @@
+{
+	"name": "dst_sql_filelog",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Connsql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FileName",
+				"type": "varchar"
+			},
+			{
+				"name": "Size",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Mdate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "FileLog"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,30 @@
+{
+	"name": "dst_blob_theams",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Connblob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "themes.csv.gz",
+				"container": "adf-data"
+			},
+			"columnDelimiter": ",",
+			"compressionCodec": "gzip",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "\u001f�\b\u0000�a;e\u0000\u0003�Z�v�\u0011��+�M�A�\u0011�d���{���v?2�\u001cH�%�\u0014�\u0001Iw˫�F~/_�[(�zX��\u001d�\u0016\u0000\u0002�z\u0002�sQ˕\u0012kiU��C�G�xR�e�gb\u0014�3�Z�V���\"\u001c%���Z�68�t5W\u0016P��\u000735\u000f\u001adCt.\u001e�J̓�J�V\u001e+�c+m�U2Y��n���",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

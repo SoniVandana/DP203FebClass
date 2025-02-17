@@ -1,0 +1,21 @@
+{
+	"name": "ConnOnPremsql",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "DESKTOP-RQ7D9OR",
+			"database": "AdventureWorks2017",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "Windows",
+			"userName": "vandana",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmMjE4NmY0YS03MzQ2LTQyZWMtODRhOS0yYzliMjkyNDdhYWUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SelfIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

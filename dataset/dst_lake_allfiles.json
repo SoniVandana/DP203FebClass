@@ -1,0 +1,18 @@
+{
+	"name": "dst_lake_allfiles",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Connlake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "adf-out"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

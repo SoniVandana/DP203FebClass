@@ -1,0 +1,25 @@
+{
+	"name": "sch_trigger_demo",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyBlobToLake",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2025-02-17T10:10:00",
+				"endTime": "2025-02-17T10:15:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

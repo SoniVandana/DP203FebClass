@@ -1,0 +1,29 @@
+{
+	"name": "Event_Tri_Demo",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyBlobProductToSql",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"p_filename": "@triggerBody().fileName ",
+					"p_foldername": "@triggerBody().folderPath"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/adf-data/blobs/ProductIn",
+			"blobPathEndsWith": "csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/24784a25-4b3b-4fbe-bd67-045821454fda/resourceGroups/DP203-RG/providers/Microsoft.Storage/storageAccounts/dssdemojan25sa",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

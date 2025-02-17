@@ -1,0 +1,45 @@
+{
+	"name": "dst_blob_allempfiles",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Connblob",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"dst_para_fname": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().dst_para_fname",
+					"type": "Expression"
+				},
+				"container": "adf-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "DeptId",
+				"type": "String"
+			},
+			{
+				"name": "DeptName",
+				"type": "String"
+			},
+			{
+				"name": "Location",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
